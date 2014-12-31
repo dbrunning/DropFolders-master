@@ -32,7 +32,7 @@ package edu.du.controllers {
 					var destDirectory:File = new File(presets[i].dest);
 					var availableFiles:Array = watchDirectory.getDirectoryListing();
 					for(var j:uint = 0; j < availableFiles.length; j++){
-						if(!availableFiles[j].isDirectory && availableFiles[j].extension != "db" && availableFiles[j].extension != "exe"){
+						if(!availableFiles[j].isDirectory && availableFiles[j].extension != "db" && availableFiles[j].extension != "exe" && availableFiles[j].extension != "DS_Store"){
 							var rightNow:Date = new Date();
 							var source:File = new File(availableFiles[j].nativePath);
 							
